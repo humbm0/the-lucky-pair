@@ -1,0 +1,14 @@
+<div class="thumbnail">
+  <a ui-sref="productDetails({productId:$ctrl.product.id})">
+    <img src="{{$ctrl.product.attributes.image._url}}" alt="product.attributes.name"/>
+    <div class="caption">
+      <div>
+        <h2 class="section-heading">{{$ctrl.product.attributes.name}}</h2>
+        <p class="section-heading">£{{$ctrl.product.attributes.price}}</p>
+      </div>
+    </div>
+  </a>
+  <button ng-controller="productListItemCtrl as ctrl" class="btn btn-sm" type="button" ng-click="quickView({productId:$ctrl.product.id})">
+      Quck view
+    </button>
+</div>

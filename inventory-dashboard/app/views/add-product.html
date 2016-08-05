@@ -1,0 +1,27 @@
+<h1>Add Product</h1>
+
+<form ng-submit="addProduct(data)" ng-controller="AddProductCtrl">
+  <div class="product-details">
+    <h2>Product details</h2>
+    <input type="text" placeholder="Product name" ng-model="data.name"/>
+    <input type="text" placeholder="Description" ng-model="data.description"/>
+  </div>
+  <div class="categorisation">
+    <h2>Categorisation</h2>
+    <input type="text" placeholder="Colour" ng-model="data.colour"/>
+    <select name="category" id="singleSelect" ng-model="data.category">
+      <option ng-repeat="category in categories.categories" value="{{category.attributes.title}}">{{ category.attributes.title }}</option> <!-- interpolation -->
+    </select>
+    <select name="collection" id="singleSelect" ng-model="data.collection">
+      <option ng-repeat="collection in collections.collections" value="{{collection.attributes.title}}">{{ collection.attributes.title }}</option> <!-- interpolation -->
+    </select>
+  </div>
+  <div class="inventory-management">
+    <h2>Inventory Management</h2>
+    <input type="number" placeholder="Price" ng-model="data.price"/>
+    <input type="number" placeholder="Sale price" ng-model="data.sale_price"/>
+    <input type="number" placeholder="Stock level" ng-model="data.stock_level"/>
+  </div>
+
+  <button class="btn btn-primary pull-right" type="submit" style="margin: 20px 0">Add product</button>
+</form>

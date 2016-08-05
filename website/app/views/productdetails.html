@@ -1,0 +1,29 @@
+<div id="bar">
+  <div class="row">
+    <div class="col-lg-8 col-sm-6">
+     <h2 class="section-heading">{{product.attributes.name}}</h2>
+     <h3>£{{product.attributes.price}}</h3>
+     <p class="lead">
+       {{product.attributes.description}}
+     </p>
+    </div>
+
+   <div class="col-lg-4 col-sm-6">
+     <img class="img-responsive" ng-src="{{product.attributes.image}}" alt="product.attributes.name" ng-if="product.attributes.image">
+   </div>
+ </div>
+
+ <div class="row">
+  <div class="col-lg-6 col-sm-6">
+    <p>
+      <buy-button product="product"></buy-button>
+    </p>
+  </div>
+
+  <div class="col-lg-6 col-sm-6 text-right">
+    <p>
+      <a ui-sref="store" class="btn btn-default btn-lg">Back to the menu</a>
+    </p>
+  </div>
+</div>
+</div>
